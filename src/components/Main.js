@@ -4,15 +4,20 @@ import Show from "../pages/Show";
 
 
 function Main(props) {
+    return (
+        <main>
+            <Switch>
+                <Route exact path="/">
+                    <Index />
+                </Route>
+                <Route path="/tasks/:id" render={(rp) => <Show {...rp} />} />
+            </Switch>
+        </main>
 
 
 
 
-    return <h1>Main</h1>;
-
-
-
-
+    )
 
 
 
