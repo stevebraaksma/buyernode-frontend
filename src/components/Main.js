@@ -15,6 +15,17 @@ function Main(props) {
         setTasks(data);
     }
 
+    const createTasks = async (task) => {
+        await fetch(URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "Application/json",
+            },
+            body: JSON.stringify(task),
+        });
+        // update task list
+        getTasks();
+    }
 
     useEffect(() => getTasks(), []);
 
@@ -28,10 +39,6 @@ function Main(props) {
                 <Route path="/tasks/:id" render={(rp) => <Show {...rp} />} />
             </Switch>
         </main>
-
-
-
-
     )
 
 
