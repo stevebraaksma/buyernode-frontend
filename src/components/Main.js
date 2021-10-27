@@ -34,7 +34,7 @@ function Main(props) {
         <main>
             <Switch>
                 <Route exact path="/">
-                    <Index tasks={tasks} />
+                    <Index tasks={tasks} createTasks={createTasks} />
                 </Route>
                 <Route path="/tasks/:id" render={(rp) => <Show {...rp} />} />
             </Switch>
