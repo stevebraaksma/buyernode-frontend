@@ -35,11 +35,6 @@ function Index(props) {
         });
     };
 
-
-
-
-
-
     const loaded = () => {
         return props.tasks.map((task) => (
             <div key={task._id} className="task">

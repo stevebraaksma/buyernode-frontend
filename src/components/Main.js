@@ -27,6 +27,31 @@ function Main(props) {
         getTasks();
     }
 
+
+    const updateTasks = async (task, id) => {
+        await fetch(URL + "/" + id, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "Application/json",
+            },
+            body: JSON.stringify(task),
+        });    
+        // update list of tasks
+        getTasks();
+        
+    };
+
+    const deleteTasks = async (id) => {
+        await fetch(URL + id, {
+            method: "DELETE",
+        });
+        // update list of tasks
+        getTasks();
+    };
+
+
+
+
     useEffect(() => getTasks(), []);
 
 
@@ -36,7 +61,17 @@ function Main(props) {
                 <Route exact path="/">
                     <Index tasks={tasks} createTasks={createTasks} />
                 </Route>
-                <Route path="/tasks/:id" render={(rp) => <Show {...rp} />} />
+                <Route 
+                    path="/tasks/:id" 
+                    render={(rp) => (
+                        <Show 
+                            tasks={tasks} 
+                            updateTasks={updateTasks} 
+                            deleteTasks={deleteTasks} 
+                            {...rp} 
+                        />
+                    )} 
+                />
             </Switch>
         </main>
     )
