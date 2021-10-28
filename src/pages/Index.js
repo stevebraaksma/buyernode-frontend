@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Card from "../components/Card";
 
 
 
@@ -35,20 +36,48 @@ function Index(props) {
         });
     };
 
+    
+        
     const loaded = () => {
-        return props.tasks.map((task) => (
-            <div key={task._id} className="task">
-                <Link to={`/tasks/${task._id}`}>
-                    <h4>SO #: {task.salesOrder}</h4>
-                </Link>
-                <h4>Customer: {task.customer}</h4>
-                <h4>Assembly #: {task.assemblyNumber}</h4>
-                <h4>Assembly Qty: {task.assemblyQty}</h4>
-                <button>Buyer</button> <button>Notes</button>
-                <br /><br /><br />
+        
+        
+
+
+        return props.tasks.map((task, index) => (
+            <div>
+            
+            <Card 
+
+            key={index} 
+            Customer={task.customer}
+
+            Customer={task.customer}
+            salesOrder={task.salesOrder}
+            {...task}
+            
+            />
             </div>
+
+
+
+
+            // <div key={task._id} className="task card card-body">
+            //     <Link to={`/tasks/${task._id}`}>
+            //         <h4>SO #: {task.salesOrder}</h4>
+            //     </Link>
+            //     <h4>Customer: {task.customer}</h4>
+            //     <h4>Assembly #: {task.assemblyNumber}</h4>
+            //     <h4>Assembly Qty: {task.assemblyQty}</h4>
+            //     <button className="btn btn-primary">Buyer</button> 
+            //     <button>Notes</button>
+            // </div>
+
+        
+
         ));
     };
+    
+
 
     const loading = () => {
         return <h1>Loading...</h1>
@@ -57,6 +86,10 @@ function Index(props) {
     return (
         <section>
             <form onSubmit={handleSubmit}>
+
+
+
+            <div className="container-fluid">
                 <input 
                     type="text" 
                     value={newForm.salesOrder} 
@@ -64,6 +97,10 @@ function Index(props) {
                     placeholder="Sales Order #" 
                     onChange={handleChange} 
                 />
+            </div>
+
+
+
                 <input 
                     type="text" 
                     value={newForm.customer} 

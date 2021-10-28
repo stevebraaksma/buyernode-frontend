@@ -6,7 +6,7 @@ function Header(props) {
     return (
         <nav className="nav">
             <Link to="/">
-                <div>BuyerNode (home)</div>
+                <div><h2>BuyerNode (home)</h2></div>
             </Link>
         </nav>
     )

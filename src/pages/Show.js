@@ -1,5 +1,6 @@
 import { useState } from 'react';
-
+import 'bootstrap';
+import { Button } from 'bootstrap';
 
 function Show(props) {
     const id = props.match.params.id;
@@ -33,7 +34,12 @@ function Show(props) {
             <h3>Customer: {task.customer}</h3>
             <h3>Assembly #: {task.assemblyNumber}</h3>
             <h3>Assembly Qty: {task.assemblyQty}</h3>
-            <button>Buyer</button> 
+
+            <button type="button" className="btn" >Buyer</button> 
+            <button type="button" className="btn btn-primary">Primary</button>
+
+
+
             <button>Notes</button>
             <button id="delete" onClick={removeTask}>
                 DELETE
