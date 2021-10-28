@@ -10,13 +10,6 @@ function Header(props) {
             </Link>
         </nav>
     )
-
-
-
-
-
-
-
 }
 
 export default Header;

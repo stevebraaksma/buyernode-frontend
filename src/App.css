@@ -38,11 +38,16 @@
 }
 
 .card-container {
+  /* border:#282c34 2px solid; */
   display: flex;
-  flex-direction: row;
+  /* align-items: center; */
+  /* width: 15rem; */
 }
 
 .card {
-  
-  width: 18rem;
+  /* border:#282c34 2px solid; */
+  /* display: flex; */
+  /* width: 15rem; */
+  /* flex-direction: column; */
+  margin: 5px;
 }

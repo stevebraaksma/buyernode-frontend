@@ -40,27 +40,16 @@ function Index(props) {
         
     const loaded = () => {
         
-        
+        <div className="card-container"></div>
 
 
         return props.tasks.map((task, index) => (
-            <div>
-            
+<div className="card-container">
             <Card 
-
             key={index} 
-            Customer={task.customer}
-
-            Customer={task.customer}
-            salesOrder={task.salesOrder}
             {...task}
-            
             />
             </div>
-
-
-
-
             // <div key={task._id} className="task card card-body">
             //     <Link to={`/tasks/${task._id}`}>
             //         <h4>SO #: {task.salesOrder}</h4>
@@ -72,9 +61,8 @@ function Index(props) {
             //     <button>Notes</button>
             // </div>
 
-        
-
         ));
+        
     };
     
 
@@ -124,7 +112,12 @@ function Index(props) {
                 />                
                 <input type="submit" value="Create Task"/>
             </form>
-            {props.tasks ? loaded() : loading()}
+
+
+            <div className="card-container">
+                {props.tasks ? loaded() : loading()}
+            </div>
+
         </section>
     );
 };
