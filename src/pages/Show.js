@@ -22,6 +22,11 @@ function Show(props) {
         props.history.push('/');
     };
 
+    const removeTask = () => {
+        props.deleteTasks(task._id);
+        props.history.push("/");
+    }
+
     return (
         <div className="task">
             <h3>SO #: {task.salesOrder}</h3>
@@ -30,6 +35,9 @@ function Show(props) {
             <h3>Assembly Qty: {task.assemblyQty}</h3>
             <button>Buyer</button> 
             <button>Notes</button>
+            <button id="delete" onClick={removeTask}>
+                DELETE
+            </button>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 

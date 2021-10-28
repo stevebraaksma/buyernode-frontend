@@ -42,18 +42,14 @@ function Main(props) {
     };
 
     const deleteTasks = async (id) => {
-        await fetch(URL + id, {
+        await fetch(URL + "/" + id, {
             method: "DELETE",
         });
         // update list of tasks
         getTasks();
     };
 
-
-
-
     useEffect(() => getTasks(), []);
-
 
     return (
         <main>
@@ -74,10 +70,7 @@ function Main(props) {
                 />
             </Switch>
         </main>
-    )
-
-
-
-}
+    );
+};
 
 export default Main;
