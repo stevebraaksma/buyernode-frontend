@@ -10,6 +10,9 @@ const CardBody = (props) => {
             <p className="card-text">Customer: {props.customer}</p>
             <p className="card-text">Assembly #: {props.assemblyNumber}</p>
             <p className="card-text">Assembly Qty: {props.assemblyQty}</p>
+
+            
+
         </div>
     )
 }
