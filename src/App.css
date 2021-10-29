@@ -53,8 +53,27 @@
   /* flex-direction: column; */
   margin: 12px;
   flex: none;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
 }
 
 input {
   margin: 4px;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 20px;
+  font-size: 4em;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
