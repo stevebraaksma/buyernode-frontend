@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import 'bootstrap';
-import { Button } from 'bootstrap';
+// import { Button } from 'bootstrap';
 
 function Show(props) {
     const id = props.match.params.id;
