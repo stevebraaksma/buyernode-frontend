@@ -30,69 +30,70 @@ function Show(props) {
 
     return (
         <div className="task">
-            <h3>SO #: {task.salesOrder}</h3>
-            <h3>Customer: {task.customer}</h3>
-            <h3>Assembly #: {task.assemblyNumber}</h3>
-            <h3>Assembly Qty: {task.assemblyQty}</h3>
+            <br />
+            <p>Created: {task.createdAt}</p>
+        
 
 
             <form onSubmit={handleSubmit}>
+                <label>SO #:</label>
                 <input 
                     type="text" 
                     value={editForm.salesOrder} 
                     name="salesOrder"
                     placeholder="Sales Order #"
                     onChange={handleChange}
-                />
+                /> <br />
+                <label>Customer:</label>
                 <input 
                     type="text" 
                     value={editForm.customer} 
                     name="customer"
                     placeholder="Customer"
                     onChange={handleChange}
-                />
+                /> <br />
+                <label>Assembly #:</label>
                 <input 
                     type="text" 
                     value={editForm.assemblyNumber} 
                     name="assemblyNumber"
                     placeholder="Assembly #"
                     onChange={handleChange}
-                />
+                /> <br />
+                <label>Assembly Qty:</label>
                 <input 
                     type="text" 
                     value={editForm.assemblyQty} 
                     name="assemblyQty"
                     placeholder="Assembly Qty"
                     onChange={handleChange}
-                />
+                /> <br />
+                <label>Buyer:</label>
                 <input 
                     type="text" 
                     value={editForm.userWorking} 
                     name="userWorking"
                     placeholder="Buyer"
                     onChange={handleChange}
-                />
-
-
-
-            <input type="submit" value="Update Task"/>
-            <br/>
-            <textarea 
+                /> <br/>
+                <label className="text-area-label">Notes:</label><br />
+                <textarea 
                     rows="4" 
-                    cols="100"
+                    cols="60"
                     type="notes" 
                     value={editForm.notes} 
                     name="notes"
                     placeholder="Notes"
                     onChange={handleChange}
                 />
-
+            <br />
+            <input className="btn btn-primary" type="submit" value="Update Task"/>
 
 
             </form>
 
             <br />   
-            <button id="delete" onClick={removeTask}>
+            <button className="btn btn-danger" id="delete" onClick={removeTask}>
                 DELETE
             </button>
             

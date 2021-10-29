@@ -74,6 +74,16 @@ input {
   text-decoration: none;
 }
 
+label {
+  width: 120px;
+  text-align: right;
+}
+
+.text-area-label {
+  text-align: left;
+  width: 520px;
+}
+
 
 
 
