@@ -41,9 +41,13 @@ function Show(props) {
 
 
             <button>Notes</button>
+
+
             <button id="delete" onClick={removeTask}>
                 DELETE
             </button>
+
+            
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 

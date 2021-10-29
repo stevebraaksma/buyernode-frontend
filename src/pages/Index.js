@@ -1,6 +1,7 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
-import Card from "../components/Card";
+// import Card from "../components/Card";
+import Accordion from 'react-bootstrap/Accordion';
 import 'bootstrap';
 
 
@@ -39,21 +40,31 @@ function Index(props) {
     const loaded = () => {
         
         return props.tasks.map((task, index) => (
-            <Card 
-            key={index} 
-            {...task}
-            />
+            // <Card 
+            // key={index} 
+            // {...task}
+            // />
 
-            // <div key={task._id} className="task card card-body">
-            //     <Link to={`/tasks/${task._id}`}>
-            //         <h4>SO #: {task.salesOrder}</h4>
-            //     </Link>
-            //     <h4>Customer: {task.customer}</h4>
-            //     <h4>Assembly #: {task.assemblyNumber}</h4>
-            //     <h4>Assembly Qty: {task.assemblyQty}</h4>
-            //     <button className="btn btn-primary">Buyer</button> 
-            //     <button>Notes</button>
-            // </div>
+            <div key={task._id} className="task card card-body">
+                <Link to={`/tasks/${task._id}`}>
+                    <h4>SO #: {task.salesOrder}</h4>
+                </Link>
+                <h4>Customer: {task.customer}</h4>
+                <h4>Assembly #: {task.assemblyNumber}</h4>
+                <h4>Assembly Qty: {task.assemblyQty}</h4>
+                <button className="btn btn-primary">Buyer</button> 
+                <button>Notes</button>
+
+                <Accordion>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>Notes</Accordion.Header>
+                            <Accordion.Body>
+                                Notes, this might be on hold.
+                            </Accordion.Body>
+                    </Accordion.Item>
+                </Accordion>
+
+            </div>
 
         ));
         
@@ -113,17 +124,6 @@ function Index(props) {
             </div>
 
 
-
-
-
-            <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button">Action</button>
-  </div>
-</div>
 
 
 

@@ -3,7 +3,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Tooltip, Toast, Popover } from 'bootstrap';
 // import * as bootstrap from 'bootstrap';
-import 'bootstrap';
+// import 'bootstrap';
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// import DropdownButton from 'react-bootstrap/DropdownButton'
 
 
 

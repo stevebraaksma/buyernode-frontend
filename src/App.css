@@ -40,6 +40,7 @@
 .card-container {
   /* border:#282c34 2px solid; */
   display: flex;
+  flex-wrap: wrap;
   /* align-items: center; */
   /* width: 15rem; */
 }
@@ -47,7 +48,9 @@
 .card {
   /* border:#282c34 2px solid; */
   /* display: flex; */
-  /* width: 15rem; */
+  width: 20rem;
+  height: inherit;
   /* flex-direction: column; */
-  margin: 5px;
+  margin: 12px;
+  flex: none;
 }
