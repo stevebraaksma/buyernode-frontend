@@ -36,12 +36,6 @@ function Show(props) {
             <h3>Assembly Qty: {task.assemblyQty}</h3>
 
 
-
-            <button id="delete" onClick={removeTask}>
-                DELETE
-            </button>
-
-
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 
@@ -50,8 +44,52 @@ function Show(props) {
                     placeholder="Sales Order #"
                     onChange={handleChange}
                 />
+                <input 
+                    type="text" 
+                    value={editForm.customer} 
+                    name="customer"
+                    placeholder="Customer"
+                    onChange={handleChange}
+                />
+                <input 
+                    type="text" 
+                    value={editForm.assemblyNumber} 
+                    name="assemblyNumber"
+                    placeholder="Assembly #"
+                    onChange={handleChange}
+                />
+                <input 
+                    type="text" 
+                    value={editForm.assemblyQty} 
+                    name="assemblyQty"
+                    placeholder="Assembly Qty"
+                    onChange={handleChange}
+                />
+                <input 
+                    type="text" 
+                    value={editForm.userWorking} 
+                    name="userWorking"
+                    placeholder="Buyer"
+                    onChange={handleChange}
+                />
+
+
+
+
+
+
+
+
             <input type="submit" value="Update Task"/>
             </form>
+
+            <br />   
+            <button id="delete" onClick={removeTask}>
+                DELETE
+            </button>
+            
+
+
         </div>
     )
 }
