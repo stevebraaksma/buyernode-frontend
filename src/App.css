@@ -54,3 +54,7 @@
   margin: 12px;
   flex: none;
 }
+
+input {
+  margin: 4px;
+}

@@ -63,7 +63,7 @@ function Index(props) {
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Notes</Accordion.Header>
                             <Accordion.Body>
-                                Notes, this might be on hold.
+                                {task.notes}
                             </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>

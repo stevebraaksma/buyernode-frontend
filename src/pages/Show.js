@@ -75,12 +75,20 @@ function Show(props) {
 
 
 
-
-
-
-
-
             <input type="submit" value="Update Task"/>
+            <br/>
+            <textarea 
+                    rows="4" 
+                    cols="100"
+                    type="notes" 
+                    value={editForm.notes} 
+                    name="notes"
+                    placeholder="Notes"
+                    onChange={handleChange}
+                />
+
+
+
             </form>
 
             <br />   
