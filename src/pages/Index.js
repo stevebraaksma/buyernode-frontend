@@ -10,7 +10,9 @@ function Index(props) {
         salesOrder: "",
         customer: "",
         assemblyNumber: "",
-        assemblyQty: "",
+        assemblyQty: "", 
+        userWorking: "Default", 
+        notes: "",
     });
 
     // handleChange function for form
@@ -33,7 +35,9 @@ function Index(props) {
             salesOrder: "",
             customer: "",
             assemblyNumber: "",
-            assemblyQty: "",            
+            assemblyQty: "", 
+            userWorking: "", 
+            notes: "",           
         });
     };
 
@@ -52,6 +56,7 @@ function Index(props) {
                 <h4>Customer: {task.customer}</h4>
                 <h4>Assembly #: {task.assemblyNumber}</h4>
                 <h4>Assembly Qty: {task.assemblyQty}</h4>
+                <h4>Buyer: {task.userWorking}</h4>
                 
 
                 <Accordion>
@@ -78,10 +83,6 @@ function Index(props) {
     return (
         <section>
             <form onSubmit={handleSubmit}>
-
-
-
-            <div className="container-fluid">
                 <input 
                     type="text" 
                     value={newForm.salesOrder} 
@@ -89,10 +90,6 @@ function Index(props) {
                     placeholder="Sales Order #" 
                     onChange={handleChange} 
                 />
-            </div>
-
-
-
                 <input 
                     type="text" 
                     value={newForm.customer} 
@@ -113,7 +110,22 @@ function Index(props) {
                     name="assemblyQty" 
                     placeholder="Assembly Qty" 
                     onChange={handleChange} 
-                />                
+                />    
+                <input 
+                    type="hidden" 
+                    value="Default" 
+                    name="userWorking" 
+                    placeholder="Buyer" 
+                    onChange={handleChange} 
+                />
+                <input 
+                    type="hidden" 
+                    value="" 
+                    name="notes" 
+                    placeholder="Notes" 
+                    onChange={handleChange} 
+                />
+
                 <input type="submit" value="Create Task"/>
             </form>
 
