@@ -52,8 +52,7 @@ function Index(props) {
                 <h4>Customer: {task.customer}</h4>
                 <h4>Assembly #: {task.assemblyNumber}</h4>
                 <h4>Assembly Qty: {task.assemblyQty}</h4>
-                <button className="btn btn-primary">Buyer</button> 
-                <button>Notes</button>
+                
 
                 <Accordion>
                     <Accordion.Item eventKey="0">

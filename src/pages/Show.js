@@ -35,19 +35,13 @@ function Show(props) {
             <h3>Assembly #: {task.assemblyNumber}</h3>
             <h3>Assembly Qty: {task.assemblyQty}</h3>
 
-            <button type="button" className="btn" >Buyer</button> 
-            <button type="button" className="btn btn-primary">Primary</button>
-
-
-
-            <button>Notes</button>
 
 
             <button id="delete" onClick={removeTask}>
                 DELETE
             </button>
 
-            
+
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 
