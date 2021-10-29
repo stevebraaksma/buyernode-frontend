@@ -2,6 +2,9 @@ import React from 'react';
 // import bootstrap from 'bootstrap'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Tooltip, Toast, Popover } from 'bootstrap';
+// import * as bootstrap from 'bootstrap';
+import 'bootstrap';
+
 
 
 import ReactDOM from 'react-dom';

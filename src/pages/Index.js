@@ -1,7 +1,7 @@
 // import { Link } from "react-router-dom";
 import { useState } from "react";
 import Card from "../components/Card";
-
+import 'bootstrap';
 
 
 function Index(props) {
@@ -122,8 +122,6 @@ function Index(props) {
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
     <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else here</button>
   </div>
 </div>
 
