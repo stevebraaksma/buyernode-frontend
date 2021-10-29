@@ -82,6 +82,7 @@ function Index(props) {
 
     return (
         <section>
+            <br />
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 
@@ -89,47 +90,31 @@ function Index(props) {
                     name="salesOrder" 
                     placeholder="Sales Order #" 
                     onChange={handleChange} 
-                />
+                /> <br />
                 <input 
                     type="text" 
                     value={newForm.customer} 
                     name="customer" 
                     placeholder="Customer" 
                     onChange={handleChange} 
-                />                
+                /> <br />                
                 <input 
                     type="text" 
                     value={newForm.assemblyNumber} 
                     name="assemblyNumber" 
                     placeholder="Assembly #" 
                     onChange={handleChange} 
-                />
+                /> <br />
                 <input 
                     type="text" 
                     value={newForm.assemblyQty} 
                     name="assemblyQty" 
                     placeholder="Assembly Qty" 
                     onChange={handleChange} 
-                />    
-                <input 
-                    type="hidden" 
-                    value="Default" 
-                    name="userWorking" 
-                    placeholder="Buyer" 
-                    onChange={handleChange} 
-                />
-                <input 
-                    type="hidden" 
-                    value="" 
-                    name="notes" 
-                    placeholder="Notes" 
-                    onChange={handleChange} 
-                />
-
-                <input type="submit" value="Create Task"/>
+                /> <br />    
+                <input className="btn btn-primary" type="submit" value="    Create New Task    "/>
             </form>
-
-
+            <br />
             <div className="card-container">
                 {props.tasks ? loaded() : loading()}
             </div>
