@@ -55,8 +55,8 @@ function Index(props) {
                     <h4>SO #: {task.salesOrder}</h4>
                 </Link>
                 <h4>Customer: {task.customer}</h4>
-                <h4>Assembly #: {task.assemblyNumber}</h4>
-                <h4>Assembly Qty: {task.assemblyQty}</h4>
+                <h6>Assembly #: {task.assemblyNumber}</h6>
+                <h6>Assembly Qty: {task.assemblyQty}</h6>
                 <h4>Buyer: {task.userWorking}</h4>
                 
                 <Button task={task}/>

@@ -30,7 +30,7 @@ const Button = (props) => {
         <div className="dropdown-buyer">
             <DropdownButton 
                 id="dropdown-basic-button" 
-                title="Select" 
+                title="Change Buyer" 
                 onSelect={handleSelect} 
             >
                 <Dropdown.Item eventKey="Buyer #1">Buyer 1</Dropdown.Item>
