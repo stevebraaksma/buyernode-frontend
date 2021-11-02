@@ -4,6 +4,7 @@ import { useState } from "react";
 import Accordion from 'react-bootstrap/Accordion';
 import 'bootstrap';
 import Button from "../components/Button";
+import StatusButton from "../components/StatusButton";
 
 
 function Index(props) {
@@ -61,6 +62,8 @@ function Index(props) {
                 <h4>Buyer: {task.userWorking}</h4>
                 
                 <Button task={task}/>
+                <StatusButton task={task}/>
+
 
                 <Accordion>
                     <Accordion.Item eventKey="0">
