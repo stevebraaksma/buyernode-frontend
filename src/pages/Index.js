@@ -62,6 +62,8 @@ function Index(props) {
                 <h4>Buyer: {task.userWorking}</h4>
                 
                 <Button task={task}/>
+
+                <h4>Status: {task.status}</h4>
                 <StatusButton task={task}/>
 
 
