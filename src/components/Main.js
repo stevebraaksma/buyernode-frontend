@@ -50,7 +50,7 @@ function Main(props) {
         getTasks();
     };
 
-    useEffect(() => getTasks(), [tasks]);
+    useEffect(() => getTasks(), []);
 
     return (
         <main>

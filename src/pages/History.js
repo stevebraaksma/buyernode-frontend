@@ -101,59 +101,11 @@ function Index(props) {
         return <h1>Loading...</h1>
     }
 
-
-
-
     return (
         <section>
-            <br />
-            <form onSubmit={handleSubmit}>
-                <input 
-                    type="text" 
-                    value={newForm.salesOrder} 
-                    name="salesOrder" 
-                    placeholder="Sales Order #" 
-                    onChange={handleChange} 
-                /> <br />
-                <input 
-                    type="text" 
-                    value={newForm.customer} 
-                    name="customer" 
-                    placeholder="Customer" 
-                    onChange={handleChange} 
-                /> <br />                
-                <input 
-                    type="text" 
-                    value={newForm.assemblyNumber} 
-                    name="assemblyNumber" 
-                    placeholder="Assembly #" 
-                    onChange={handleChange} 
-                /> <br />
-                <input 
-                    type="text" 
-                    value={newForm.assemblyQty} 
-                    name="assemblyQty" 
-                    placeholder="Assembly Qty" 
-                    onChange={handleChange} 
-                /> <br />    
-                <input className="btn btn-primary" type="submit" value="    Create New Task    "/>
-            </form>
-            <br />
             <div className="card-container">
-
-                
-
                 {props.tasks ? loaded() : loading()}
-
-
-
             </div>
-
-
-
-
-
-
         </section>
     );
 };
