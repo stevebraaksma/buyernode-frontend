@@ -1,5 +1,5 @@
-import DropdownButton from 'react-bootstrap/dropdownbutton';
-import Dropdown from 'react-bootstrap/dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const Button = (props) => {
 
