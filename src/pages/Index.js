@@ -13,6 +13,7 @@ function Index(props) {
         assemblyNumber: "",
         assemblyQty: "", 
         userWorking: "Default", 
+        status: "WIP",
         notes: "",
     });
 
