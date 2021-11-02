@@ -6,7 +6,10 @@ function Header(props) {
     return (
         <nav className="nav">
             <Link to="/">
-                <div><h2>BuyerNode (home)</h2></div>
+                <div><h2>BuyerNode</h2></div>
+            </Link>
+            <Link to="/history">
+                <div><h3>History</h3></div>
             </Link>
         </nav>
     )
