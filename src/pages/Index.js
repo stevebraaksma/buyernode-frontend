@@ -3,6 +3,7 @@ import { useState } from "react";
 // import Card from "../components/Card";
 import Accordion from 'react-bootstrap/Accordion';
 import 'bootstrap';
+import Button from "../components/Button";
 
 
 function Index(props) {
@@ -58,6 +59,7 @@ function Index(props) {
                 <h4>Assembly Qty: {task.assemblyQty}</h4>
                 <h4>Buyer: {task.userWorking}</h4>
                 
+                <Button task={task}/>
 
                 <Accordion>
                     <Accordion.Item eventKey="0">

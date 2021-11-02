@@ -29,6 +29,7 @@ function Main(props) {
 
 
     const updateTasks = async (task, id) => {
+        console.log(task)
         await fetch(URL + "/" + id, {
             method: "PUT",
             headers: {
@@ -49,13 +50,13 @@ function Main(props) {
         getTasks();
     };
 
-    useEffect(() => getTasks(), []);
+    useEffect(() => getTasks(), [tasks]);
 
     return (
         <main>
             <Switch>
                 <Route exact path="/">
-                    <Index tasks={tasks} createTasks={createTasks} />
+                    <Index tasks={tasks} createTasks={createTasks} updateTasks={updateTasks}/>
                 </Route>
                 <Route 
                     path="/tasks/:id" 
