@@ -49,8 +49,6 @@ function Index(props) {
         console.log(props.tasks);
         let filteredOpenTasks = props.tasks.filter((check) => check.status === "WIP")
         console.log(filteredOpenTasks);
-        // console.log(props.tasks.filter((munch) => munch.tasks.status === "WIP"));
-
         
         return filteredOpenTasks.map((task, index) => (
 

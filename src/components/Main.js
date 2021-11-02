@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Index from "../pages/Index";
 import Show from "../pages/Show";
+import History from "../pages/History";
 
 
 function Main(props) {
@@ -57,6 +58,9 @@ function Main(props) {
             <Switch>
                 <Route exact path="/">
                     <Index tasks={tasks} createTasks={createTasks} updateTasks={updateTasks}/>
+                </Route>
+                <Route path="/history">
+                    <History tasks={tasks}/>
                 </Route>
                 <Route 
                     path="/tasks/:id" 

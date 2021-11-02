@@ -7,56 +7,16 @@ import Button from "../components/Button";
 import StatusButton from "../components/StatusButton";
 
 
-function Index(props) {
-    const [newForm, setNewForm] = useState({
-        salesOrder: "",
-        customer: "",
-        assemblyNumber: "",
-        assemblyQty: "", 
-        userWorking: "Default", 
-        status: "WIP",
-        notes: "",
-    });
-
-    // handleChange function for form
-    const handleChange = (event) => {
-        setNewForm((prevState) => ({
-            ...prevState,
-            [event.target.name]: event.target.value
-            
-        }));
-    };
-
-    
-
-    // handleSubmit function for form
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        props.createTasks(newForm);
-        console.log(newForm);
-        setNewForm({
-            salesOrder: "",
-            customer: "",
-            assemblyNumber: "",
-            assemblyQty: "", 
-            userWorking: "", 
-            notes: "",           
-        });
-    };
+function History(props) {
 
     const loaded = () => {
         
         console.log(props.tasks);
-        let filteredOpenTasks = props.tasks.filter((check) => check.status === "WIP")
-        console.log(filteredOpenTasks);
-        // console.log(props.tasks.filter((munch) => munch.tasks.status === "WIP"));
+        let filteredCompleteTasks = props.tasks.filter((check) => check.status === "Complete")
+        console.log(filteredCompleteTasks);
 
-        
-        return filteredOpenTasks.map((task, index) => (
+        return filteredCompleteTasks.map((task, index) => (
 
-
-
-            
             <div key={task._id} className="task card card-body">
                 <Link to={`/tasks/${task._id}`}>
                     <h4>SO #: {task.salesOrder}</h4>
@@ -86,17 +46,8 @@ function Index(props) {
         ));
 
 
-
-
-
-
-
-
-        
     };
     
-
-
     const loading = () => {
         return <h1>Loading...</h1>
     }
@@ -110,4 +61,4 @@ function Index(props) {
     );
 };
 
-export default Index;
+export default History;
