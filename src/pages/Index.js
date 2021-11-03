@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import Card from "../components/Card";
 import Accordion from 'react-bootstrap/Accordion';
 import 'bootstrap';
@@ -62,7 +62,7 @@ function Index(props) {
                 <h4>Customer: {task.customer}</h4>
                 <h6>Assembly #: {task.assemblyNumber}</h6>
                 <h6>Assembly Qty: {task.assemblyQty}</h6>
-                <h4>Buyer: {task.userWorking}</h4>
+                {/* <h4>Buyer: {task.userWorking}</h4> */}
     
                 <Button task={task}/>
 
@@ -100,7 +100,7 @@ function Index(props) {
     }
 
 
-
+    // useEffect(() => {'bingo'}, [Button]);
 
     return (
         <section>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 // import Card from "../components/Card";
 import Accordion from 'react-bootstrap/Accordion';
 import 'bootstrap';
@@ -8,6 +8,7 @@ import StatusButton from "../components/StatusButton";
 
 
 function History(props) {
+    
 
     const loaded = () => {
         
@@ -24,7 +25,7 @@ function History(props) {
                 <h4>Customer: {task.customer}</h4>
                 <h6>Assembly #: {task.assemblyNumber}</h6>
                 <h6>Assembly Qty: {task.assemblyQty}</h6>
-                <h4>Buyer: {task.userWorking}</h4>
+                {/* <h4>Buyer: {task.userWorking}</h4> */}
     
                 <Button task={task}/>
 
