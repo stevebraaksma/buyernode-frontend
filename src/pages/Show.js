@@ -1,15 +1,12 @@
 import { useState } from 'react';
 import 'bootstrap';
-// import { Button } from 'bootstrap';
 
 function Show(props) {
     const id = props.match.params.id;
     const tasks = props.tasks;
     console.log(props.tasks);
     const task = tasks.find((p) => p._id === id);
-    
     const [editForm, setEditForm] = useState(task);
-
     const handleChange = (event) => {
         setEditForm((prevState) => ({
             ...prevState,
@@ -32,8 +29,6 @@ function Show(props) {
         <div className="task">
             <br />
             <p>Created: {task.createdAt}</p>
-        
-
 
             <form onSubmit={handleSubmit}>
                 <label>SO #:</label>
@@ -88,17 +83,11 @@ function Show(props) {
                 />
             <br />
             <input className="btn btn-primary" type="submit" value="Update Task"/>
-
-
             </form>
-
             <br />   
             <button className="btn btn-danger" id="delete" onClick={removeTask}>
                 DELETE
             </button>
-            
-
-
         </div>
     )
 }

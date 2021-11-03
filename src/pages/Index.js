@@ -51,7 +51,7 @@ function Index(props) {
                 <h6>Assembly #: {task.assemblyNumber}</h6>
                 <h6>Assembly Qty: {task.assemblyQty}</h6>
                 <Button task={task}/>
-                <StatusButton task={task} aCoolFunction={aCoolFunction}/>
+                <StatusButton task={task}/>
                 <Accordion>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Notes</Accordion.Header>
