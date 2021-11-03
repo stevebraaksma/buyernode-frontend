@@ -1,7 +1,7 @@
 import { Redirect } from "react-router-dom";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const Button = (props) => {
 

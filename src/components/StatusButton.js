@@ -1,11 +1,16 @@
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { useState } from 'react';
 
 const StatusButton = (props) => {
+
+    const [currentStatus, setCurrentStatus] = useState(props.task.status);
+    console.log(currentStatus);
 
     const handleSelect=(event)=> {
         props.task.status = event;
         updateTasks();
+        setCurrentStatus(event);
     }
     
     const URL = "https://buyernode.herokuapp.com/tasks";
@@ -28,6 +33,7 @@ const StatusButton = (props) => {
 
     return (
         <div className="dropdown-status">
+            <h4>Status: {currentStatus}</h4>
             <DropdownButton 
                 id="dropdown-basic-button" 
                 title="Change Status" 
