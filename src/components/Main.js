@@ -4,12 +4,9 @@ import Index from "../pages/Index";
 import Show from "../pages/Show";
 import History from "../pages/History";
 
-
 function Main(props) {
     const [tasks, setTasks] = useState(null);
-
     const URL = "https://buyernode.herokuapp.com/tasks";
-
     const getTasks = async () => {
         const response = await fetch(URL);
         const data = await response.json();
@@ -28,7 +25,6 @@ function Main(props) {
         getTasks();
     }
 
-
     const updateTasks = async (task, id) => {
         console.log(task)
         await fetch(URL + "/" + id, {
@@ -40,7 +36,6 @@ function Main(props) {
         });    
         // update list of tasks
         getTasks();
-        
     };
 
     const deleteTasks = async (id) => {
@@ -52,7 +47,6 @@ function Main(props) {
     };
 
     useEffect(() => getTasks(), []);
-    // useEffect(() => {console.log('bingo')},[tasks]);
 
     return (
         <main>
