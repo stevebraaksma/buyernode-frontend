@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-// import Card from "../components/Card";
 import Accordion from 'react-bootstrap/Accordion';
 import 'bootstrap';
 import Button from "../components/Button";
 import StatusButton from "../components/StatusButton";
-
 
 function Index(props) {
     const [newForm, setNewForm] = useState({
@@ -27,8 +25,6 @@ function Index(props) {
         }));
     };
 
-    
-
     // handleSubmit function for form
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -44,24 +40,9 @@ function Index(props) {
         });
     };
 
-
-    //////
-    const aCoolFunction = () => {
-        console.log("HOORAY")
-    }
-    //////
-
     const loaded = () => {
-        
-        console.log(props.tasks);
         let filteredOpenTasks = props.tasks.filter((check) => check.status === "WIP")
-        console.log(filteredOpenTasks);
-        
         return filteredOpenTasks.map((task, index) => (
-
-
-
-            
             <div key={task._id} className="task card card-body">
                 <Link to={`/tasks/${task._id}`}>
                     <h4>SO #: {task.salesOrder}</h4>
@@ -69,14 +50,8 @@ function Index(props) {
                 <h4>Customer: {task.customer}</h4>
                 <h6>Assembly #: {task.assemblyNumber}</h6>
                 <h6>Assembly Qty: {task.assemblyQty}</h6>
-                {/* <h4>Buyer: {task.userWorking}</h4> */}
-    
                 <Button task={task}/>
-
-                {/* <h4>Status: {task.status}</h4> */}
                 <StatusButton task={task} aCoolFunction={aCoolFunction}/>
-
-
                 <Accordion>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Notes</Accordion.Header>
@@ -85,29 +60,13 @@ function Index(props) {
                             </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
-
             </div>
-
         ));
-
-
-
-
-
-
-
-
-        
     };
     
-
-
     const loading = () => {
         return <h1>Loading...</h1>
     }
-
-
-    // useEffect(() => {'bingo'}, [Button]);
 
     return (
         <section>
@@ -145,20 +104,8 @@ function Index(props) {
             </form>
             <br />
             <div className="card-container">
-
-                
-
                 {props.tasks ? loaded() : loading()}
-
-
-
             </div>
-
-
-
-
-
-
         </section>
     );
 };
