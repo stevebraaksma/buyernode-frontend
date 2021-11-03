@@ -29,7 +29,7 @@ function History(props) {
     
                 <Button task={task}/>
 
-                <h4>Status: {task.status}</h4>
+                {/* <h4>Status: {task.status}</h4> */}
                 <StatusButton task={task}/>
 
 

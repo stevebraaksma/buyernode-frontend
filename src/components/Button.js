@@ -1,4 +1,3 @@
-import { Redirect } from "react-router-dom";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { useState } from 'react';
@@ -9,6 +8,7 @@ const Button = (props) => {
     const [tasks, setTasks] = useState(null);
     const [currentBuyer, setCurrentBuyer] = useState(props.task.userWorking);
     console.log(currentBuyer);
+    console.log(tasks);
 
 
     const URL = "https://buyernode.herokuapp.com/tasks";

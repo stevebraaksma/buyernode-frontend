@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 // import Card from "../components/Card";
 import Accordion from 'react-bootstrap/Accordion';
 import 'bootstrap';
@@ -44,6 +44,13 @@ function Index(props) {
         });
     };
 
+
+    //////
+    const aCoolFunction = () => {
+        console.log("HOORAY")
+    }
+    //////
+
     const loaded = () => {
         
         console.log(props.tasks);
@@ -66,8 +73,8 @@ function Index(props) {
     
                 <Button task={task}/>
 
-                <h4>Status: {task.status}</h4>
-                <StatusButton task={task}/>
+                {/* <h4>Status: {task.status}</h4> */}
+                <StatusButton task={task} aCoolFunction={aCoolFunction}/>
 
 
                 <Accordion>

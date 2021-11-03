@@ -52,7 +52,7 @@ function Main(props) {
     };
 
     useEffect(() => getTasks(), []);
-    useEffect(() => {console.log('bingo')},[tasks]);
+    // useEffect(() => {console.log('bingo')},[tasks]);
 
     return (
         <main>
