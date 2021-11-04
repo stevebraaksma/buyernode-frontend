@@ -6,11 +6,11 @@ function Header(props) {
         <nav className="nav">
             <Link to="/">
                 <div>
-                    <h2>BuyerNode Task Manager</h2>
+                    <h2 className="home-nav">BuyerNode Task Manager</h2>
                 </div>
             </Link>
             <Link to="/history">
-                <div><h3>History</h3></div>
+                <div><h3 className="home-nav">History</h3></div>
             </Link>
         </nav>
     )
