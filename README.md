@@ -28,10 +28,9 @@ can be viewed in a popup window.
 
 # Getting Started
 [Click here](https://buyernode.netlify.com/) to see the deployed Project.
-On the home page, choose to manually enter parts, or upload Excel spreadsheet.
 
 # Future Enhancements
 
-- Connect to company ERP system database to automatically add certain Sales Orders meeting certain
+- Connect to company ERP system database to automatically add new Sales Orders meeting certain
 criteria to the the app as tasks.
 - Send daily reminder emails from the app to the procurement team members.
