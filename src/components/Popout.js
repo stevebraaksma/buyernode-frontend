@@ -24,7 +24,7 @@ function Popout(props) {
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
+    subtitle.style.color = '#000';
   }
 
   function closeModal() {
@@ -43,8 +43,10 @@ function Popout(props) {
         contentLabel="Example Modal"
       >
         <h4 ref={(_subtitle) => (subtitle = _subtitle)}>Notes</h4>
+        <div className="notes-display">{props.task.notes}</div>
+        <br />
         <button className="btn btn-info" onClick={closeModal}>close</button>
-        <div>{props.task.notes}</div>
+        
       </Modal>
       <br />
       <br />
