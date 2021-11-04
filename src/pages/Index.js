@@ -4,6 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import 'bootstrap';
 import Button from "../components/Button";
 import StatusButton from "../components/StatusButton";
+import Popout from "../components/Popout";
 
 function Index(props) {
     const [newForm, setNewForm] = useState({
@@ -52,6 +53,7 @@ function Index(props) {
                 <h6>Assembly Qty: {task.assemblyQty}</h6>
                 <Button task={task}/>
                 <StatusButton task={task}/>
+                <Popout task={task}/>
                 <Accordion>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Notes</Accordion.Header>
