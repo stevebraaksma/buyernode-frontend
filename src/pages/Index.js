@@ -29,7 +29,6 @@ function Index(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         props.createTasks(newForm);
-        console.log(newForm);
         setNewForm({
             salesOrder: "",
             customer: "",

@@ -19,7 +19,6 @@ function Popout(props) {
 
   function openModal() {
     setIsOpen(true);
-    console.log(props)
   }
 
   function afterOpenModal() {

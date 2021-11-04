@@ -26,7 +26,6 @@ function Main(props) {
     }
 
     const updateTasks = async (task, id) => {
-        console.log(task)
         await fetch(URL + "/" + id, {
             method: "PUT",
             headers: {

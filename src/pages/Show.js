@@ -4,7 +4,6 @@ import 'bootstrap';
 function Show(props) {
     const id = props.match.params.id;
     const tasks = props.tasks;
-    console.log(props.tasks);
     const task = tasks.find((p) => p._id === id);
     const [editForm, setEditForm] = useState(task);
     const handleChange = (event) => {
