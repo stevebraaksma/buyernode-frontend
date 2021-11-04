@@ -74,7 +74,7 @@ function Show(props) {
                 <label className="text-area-label">Notes:</label><br />
                 <textarea 
                     rows="4" 
-                    cols="60"
+                    cols="35"
                     type="notes" 
                     value={editForm.notes} 
                     name="notes"
