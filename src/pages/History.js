@@ -5,11 +5,8 @@ import StatusButton from "../components/StatusButton";
 import Popout from "../components/Popout";
 
 function History(props) {
-
     const loaded = () => {
-        console.log(props.tasks);
         let filteredCompleteTasks = props.tasks.filter((check) => check.status === "Complete")
-        console.log(filteredCompleteTasks);
         return filteredCompleteTasks.map((task, index) => (
             <div key={task._id} className="task card card-body">
                 <Link to={`/tasks/${task._id}`}>
